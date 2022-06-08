@@ -4,13 +4,13 @@ function gameWorld(){
 
 }
 
-gameWorld.prototype.update(){
+gameWorld.prototype.update() = function(){
 
     this.stick.update();
 
 }
 
-gameWorld.prototype.draw(){
+gameWorld.prototype.draw() = function(){
 
     Canvas.drawimage(sprites.background, {x:0, y:0});
 
