@@ -9,14 +9,18 @@ Game.prototype.init() = function(){
 }
 
 Game.prototype.start() = function(){
-    this.init();
+    poolGame.init();
 
-    this.
+    poolGame.mainloop()
 }
 
 Game.prototype.mainLoop() = function(){
     
-    .clear
+    Canvas.clear();
+    poolGame.gameWorld.update();
+    poolGame.gameWorld.draw();
+
+    requestAnimationFrame(poolGame.mainloop);
 }
 
 let poolGame = new Game();
