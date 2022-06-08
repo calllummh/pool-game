@@ -20,7 +20,7 @@ function loadAssets(callback){
     function loadSprite(fileName){
         assetsStillLoading++;
 
-        let spriteImage = new Image():
+        let spriteImage = new Image();
         spriteImage.spr = "./assets/sprites/" + fileName;
         
         spriteImage.onload = function(){
@@ -30,7 +30,7 @@ function loadAssets(callback){
         //returning image
         return spriteImage;
     }
-    
+
     //loading the background and stick
     sprites.background = loadSprite('spr_background.png')
     sprites.stick = loadSprite('spr_stick.png')

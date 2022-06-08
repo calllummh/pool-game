@@ -14,7 +14,7 @@ Canvas2D.prototype.clear = function(){
 
 //image on canvas
 Canvas2D.prototype.drawImage = function(image,position){
-    this._canvasContext.drawImage(image,position.x,position.y)    
+    this._canvasContext.drawImage(image,position.x,position.y) 
 }
 
 let Canvas = new Canvas2D();

@@ -8,5 +8,6 @@ gameWorld.prototype.update(){
 }
 
 gameWorld.prototype.draw(){
-    
+
+    Canvas.drawimage(sprites.background, {x:0, y:0});
 }
