@@ -1,0 +1,7 @@
+{
+    "type": "module",
+    "dependencies": {
+      "ramda": "^0.28.0"
+    }
+  }
+  
