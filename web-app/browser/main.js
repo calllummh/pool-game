@@ -20,9 +20,12 @@ Canvas2D.prototype.drawImage = function(image,position){
 let Canvas = new Canvas2D();
 // //just for testing
 // let image = new Image();
-// image.src = "./assets/sprites/spr_background.png"
+// image.src = "./assets/sprites/spr_background.png"§
 
 // //making callback function to run test (setting timeout to 1s)
 // setTimeout(()=>{
 //     Canvas.drawImage(image,{x:0,y:0});
 // }, 1000);
+
+
+//all event listeners and server-side code (CHECK EXAMPLE)

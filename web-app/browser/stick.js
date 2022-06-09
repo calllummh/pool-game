@@ -6,8 +6,8 @@ function stick(){
 stick.prototype.update = function(){
 
 
-    //testing
-    this.position.x++;
+    // //testing
+    // this.position.x++;
 }
 
 stick.prototype.draw = function(){
