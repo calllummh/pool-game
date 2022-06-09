@@ -4,7 +4,7 @@ function Game(){
 }
 
 Game.prototype.init() = function(){
-    this.gameWorld = new this.gameWorld();
+    poolGame.gameWorld = new this.gameWorld();
 
 }
 

@@ -6,7 +6,7 @@ function gameWorld(){
 
 gameWorld.prototype.update() = function(){
 
-    this.stick.update();
+    poolGame.stick.update();
 
 }
 
