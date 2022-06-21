@@ -1,27 +1,30 @@
-//creating game object with three methods
+// defining new function constructor
 function Game(){
 
 }
 
-Game.prototype.init() = function(){
-    poolGame.gameWorld = new this.gameWorld();
+Game.prototype.init = function(){
 
+    this.gameWorld = new GameWorld();
 }
 
-Game.prototype.start() = function(){
-    poolGame.init();
-
-    poolGame.mainloop()
-}
-
-//clear canvas, update and draw gameworld
-Game.prototype.mainLoop() = function(){
+Game.prototype.start = function(){
     
-    Canvas.clear();
-    poolGame.gameWorld.update();
-    poolGame.gameWorld.draw();
+    PoolGame.init();
 
-    requestAnimationFrame(poolGame.mainloop);
+    PoolGame.mainLoop();
+
 }
 
-let poolGame = new Game();
+// main loop function, clearing canvas, updating and drawing world, then calling mainloop function for next frame
+Game.prototype.mainLoop = function(){
+
+    Canvas.clear();
+    PoolGame.gameWorld.update();
+    PoolGame.gameWorld.draw();
+    Mouse.reset();
+
+    requestAnimationFrame(PoolGame.mainLoop);
+}
+
+let PoolGame = new Game();
