@@ -9,9 +9,18 @@ Vector2.prototype.copy = function(){
     return new Vector2(this.x, this.y);
 }
 
+// vector arithmetic
+Vector2.prototype.add = function(vector){
+    return new Vector2(this.x + vector.x, this.y + vector.y);
+}
+
 Vector2.prototype.addTo = function(vector){
     this.x += vector.x;
     this.y += vector.y;
+}
+
+Vector2.prototype.subtract = function(vector){
+    return new Vector2(this.x - vector.x, this.y - vector.y);
 }
 
 Vector2.prototype.mult = function(scalar){
@@ -19,6 +28,10 @@ Vector2.prototype.mult = function(scalar){
     return new Vector2(this.x * scalar, this.y * scalar)
 }
 
+
+Vector2.prototype.dot = function(vector){
+    return this.x * vector.x + this.y * vector.y;
+}
 
 // method for length of vector
 Vector2.prototype.length = function(){
