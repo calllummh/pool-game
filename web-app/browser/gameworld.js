@@ -29,8 +29,22 @@ function GameWorld(){
         this.whiteBall.shoot.bind(this.whiteBall));
 
 }
+
+GameWorld.prototype.handleCollisions = function(){
+
+    for(let i=0; i < this.balls.length; i++){
+        for(let j = i + 1; j < this.balls.length; j++){
+            const firstBall = this.balls[i];
+            const secondBall = this.balls[j];
+            firstBall.collideWith(secondBall);
+        }
+    }
+}
+
 // sprite update method
 GameWorld.prototype.update = function(){
+
+    this.handleCollisions();
 
     this.stick.update();
     
@@ -62,5 +76,12 @@ GameWorld.prototype.ballsMoving = function(){
     
     let ballsMoving = false;
 
-    for( let i=0; i < this.balls) 
+    for( let i=0; i < this.balls.length; i++){
+        if(this.balls[i].moving){
+            ballsMoving = true;
+            break;
+        }
+    } 
+    return ballsMoving;
 }
+
